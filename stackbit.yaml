@@ -32,4 +32,13 @@ excludePages:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
-models:
+
+models: # top level models key
+  page: # a content model called "article"
+    type: page # this is a page model
+    label: Page
+    folder: / # matches all markdown files in the content folder
+    fields: # array of field models, must be nested under a content model
+      - type: string
+        name: title
+        label: Title
