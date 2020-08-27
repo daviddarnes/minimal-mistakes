@@ -11,6 +11,66 @@ excludePages:
   - test
   - docs
 models:
+  config:
+    type: data
+    label: Configuration
+    file: _config.yml
+    fields:
+      - type: enum
+        name: minimal_mistakes_skin
+        label: "Skin"
+        options: [default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise]
+      - type: string
+        name: locale
+        label: "Locale"
+        default: "en-US"
+      - type: string
+        name: title
+        label: "Site title"
+      - type: string
+        name: title_separator
+        label: "Title separator"
+        default: "-"
+      - type: string
+        name: subtitle
+        label: "Subtitle"
+      - type: string
+        name: name
+        label: "Name"
+      - type: string
+        name: name
+        label: "Name"
+      - type: string
+        name: description
+        label: "Description"
+        default: "An amazing website"
+      - type: string
+        name: url
+        label: "URL"
+      - type: string
+        name: baseurl
+        label: "Base URL"
+      - type: string
+        name: repository
+        label: "Repository URL"
+      - type: image
+        name: teaser
+        label: "Default teaser image"
+      - type: image
+        name: logo
+        label: "Logo image"
+      - type: string
+        name: masthead_title
+        label: "Masthead title"
+        default: " "
+      - type: boolean
+        name: breadcrumbs
+        label: "Breadcrumbs"
+        default: false
+      - type: number
+        name: words_per_minute
+        label: "Words per minute reading time"
+        default: 200
   page:
     type: page
     label: Page
