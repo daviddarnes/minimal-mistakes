@@ -147,13 +147,12 @@ models:
             label: Secret
       - type: object
         name: atom_feed
-        type: object
         label: Atom feed
-          fields:
-            - type: string
-              name: path
-              label: Path
-              default: "feed.xml"
+        fields:
+          - type: string
+            name: path
+            label: Path
+            default: "feed.xml"
       - type: boolean
         name: search
         label: Add search
@@ -255,13 +254,14 @@ models:
           - type: object
             name: google
             label: "Google"
-            - type: string
-              name: tracking_id
-              label: "Tracking ID"
-            - type: boolean
-              name: anonymize_ip
-              label: "Anonymize IP"
-              default: false
+            fields:
+              - type: string
+                name: tracking_id
+                label: "Tracking ID"
+              - type: boolean
+                name: anonymize_ip
+                label: "Anonymize IP"
+                default: false
       - type: object
         name: author
         label: "Author"
