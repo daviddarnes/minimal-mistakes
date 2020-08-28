@@ -71,6 +71,70 @@ models:
         name: words_per_minute
         label: "Words per minute reading time"
         default: 200
+      - type: object
+        name: comments
+        label: Comments
+        description: "Site commenting system"
+        fields:
+          - type: enum
+            name: provider
+            label: "Comments provider"
+            default: false
+            options: [false, discourse, facebook, staticman, staticman_v2, utterances, custom]
+          - type: object
+            name: disqus
+            label: "Disqus"
+            fields:
+              - type: string
+                name: shortname
+                label: "Shortname"
+          - type: object
+            name: discourse
+            label: "Discourse"
+            fields:
+              - type: string
+                name: server
+                label: "Server"
+          - type: object
+            name: facebook
+            label: "Facebook"
+            fields:
+              - type: string
+                name: appid
+                label: "App ID"
+              - type: number
+                name: num_posts
+                label: "Number of posts"
+                default: 5
+              - type: enum
+                name: colorscheme
+                label: "Color scheme"
+                default: light
+                options: [light, dark]
+          - type: object
+            name: utterances
+            label: "Utterances"
+            fields:
+              - type: enum
+                name: theme
+                label: "Theme"
+                default: github-light
+                options: [github-light, github-dark]
+              - type: string
+                name: issue_term
+                label: "Issue term"
+                default: pathname
+          - type: object
+            name: staticman
+            label: "Staticman"
+            fields:
+              - type: string
+                name: branch
+                label: "Branch"
+                default: master
+              - type: string
+                name: endpoint
+                label: "Endpoint"
   page:
     type: page
     label: Page
