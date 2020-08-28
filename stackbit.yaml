@@ -135,6 +135,143 @@ models:
               - type: string
                 name: endpoint
                 label: "Endpoint"
+      - type: object
+        name: reCaptcha
+        label: ReCaptcha
+        fields:
+          - type: string
+            name: siteKey
+            label: Site key
+          - type: string
+            name: secret
+            label: Secret
+      - type: object
+        name: atom_feed
+        type: object
+        label: Atom feed
+          fields:
+            - type: string
+              name: path
+              label: Path
+              default: "feed.xml"
+      - type: boolean
+        name: search
+        label: Add search
+        default: false
+      - type: boolean
+        name: search_full_content
+        label: Search full content
+        default: false
+      - type: enum
+        name: search_provider
+        label: Search provider
+        default: lunr
+        options: [lunr, algolia, google]
+      - type: object
+        name: algolia
+        label: "Algolia details"
+        fields:
+          - type: string
+            name: application_id
+            label: "Application ID"
+          - type: string
+            name: index_name
+            label: "Index name"
+          - type: string
+            name: search_only_api_key
+            label: "Search only API key"
+          - type: boolean
+            name: powered_by
+            label: "Powered by label"
+            default: true
+      - type: object
+        name: google
+        label: "Google details"
+        fields:
+          - type: string
+            name: search_engine_id
+            label: "Search engine ID"
+          - type: boolean
+            name: instant_search
+            label: "Instant search"
+            default: false
+      - type: string
+        name: google_site_verification
+        label: "Google site verification"
+      - type: string
+        name: bing_site_verification
+        label: "Bing site verification"
+      - type: string
+        name: yandex_site_verification
+        label: "Yandex site verification"
+      - type: string
+        name: naver_site_verification
+        label: "Naver site verification"
+      - type: object
+        name: twitter
+        label: "Twitter details"
+        fields:
+          - type: string
+            name: username
+            label: "Username"
+      - type: object
+        name: facebook
+        label: "Facebook details"
+        fields:
+          - type: string
+            name: username
+            label: "Username"
+          - type: string
+            name: app_id
+            label: "App ID"
+          - type: string
+            name: publisher
+            label: "Publisher"
+      - type: image
+        name: og_image
+        label: "Open graph image"
+      - type: object
+        name: social
+        label: "Social"
+        fields:
+          - type: string
+            name: type
+            label: "Type"
+          - type: string
+            name: name
+            label: "Name"
+          - type: string
+            name: links
+            label: "Links to social media (separated by a comma)"
+      - type: object
+        name: analytics
+        label: "Analytics"
+        fields:
+          - type: enum
+            name: provider
+            label: "Provider"
+            default: false
+            options: [false, google, google-universal, google-gtag, custom]
+          - type: object
+            name: google
+            label: "Google"
+            - type: string
+              name: tracking_id
+              label: "Tracking ID"
+            - type: boolean
+              name: anonymize_ip
+              label: "Anonymize IP"
+              default: false
+      - type: object
+        name: author
+        label: "Author"
+        fields:
+          - type: string
+            name: name
+            label: "Name"
+          - type: image
+            name: og_image
+            label: "Open graph image"
   page:
     type: page
     label: Page
