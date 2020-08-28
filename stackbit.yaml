@@ -80,7 +80,7 @@ models:
             name: provider
             label: "Comments provider"
             default: false
-            options: [false, discourse, facebook, staticman, staticman_v2, utterances, custom]
+            options: [discourse, facebook, staticman, staticman_v2, utterances, custom]
           - type: object
             name: disqus
             label: "Disqus"
@@ -250,7 +250,7 @@ models:
             name: provider
             label: "Provider"
             default: false
-            options: [false, google, google-universal, google-gtag, custom]
+            options: [google, google-universal, google-gtag, custom]
           - type: object
             name: google
             label: "Google"
