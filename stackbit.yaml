@@ -269,9 +269,72 @@ models:
           - type: string
             name: name
             label: "Name"
+            default: "Your Name"
           - type: image
-            name: og_image
-            label: "Open graph image"
+            name: avatar
+            label: "Avatar"
+          - type: string
+            name: bio
+            label: "Bio"
+            default: "I am an **amazing** person."
+          - type: string
+            name: location
+            label: "Location"
+            default: "Somewhere"
+          - type: string
+            name: email
+            label: "Email"
+          - type: list
+            name: links
+            label: "Links"
+            items:
+              type: object
+              labelField: label
+              fields:
+                - type: string
+                  name: label
+                  label: "Label"
+                - type: string
+                  name: icon
+                  label: "Icon classes"
+                - type: string
+                  name: url
+                  label: "URL"
+      - type: object
+        name: footer
+        label: "Footer"
+        fields:
+          - type: list
+            name: links
+            label: "Links"
+            items:
+              type: object
+              labelField: label
+              fields:
+                - type: string
+                  name: label
+                  label: "Label"
+                - type: string
+                  name: icon
+                  label: "Icon classes"
+                - type: string
+                  name: url
+                  label: "URL"
+      - type: string
+        name: permalink
+        label: "Permalink structure"
+        default: /:categories/:title/
+      - type: string
+        name: paginate
+        label: "Pagination count"
+        default: 5
+      - type: string
+        name: paginate_path
+        label: "Pagination path"
+        default: /page:num/
+      - type: string
+        name: timezone
+        label: "Timezone, more info at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
   page:
     type: page
     label: Page
