@@ -38,9 +38,6 @@ models:
         name: name
         label: "Name"
       - type: string
-        name: name
-        label: "Name"
-      - type: string
         name: description
         label: "Description"
         default: "An amazing website"
